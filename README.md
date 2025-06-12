@@ -38,11 +38,13 @@ The dataset used in this project is the **Regensburg Pediatric Appendicitis Data
 
 ## Results
 Explanatory variables retained in the reduced model align with existing medical knowledge; symptoms such as pain in the lower right abdomen, pain on coughing and nausea remained, along with inflammatory markers like white blood cell (WBC) count and C-reactive protein (CRP). Though the strongest, most important predictor was appendix diameter.
-</br></br>The reduced model managed to get the prediction accuracy of 97.2% while the full model (named trimmed model in the code) got 96.6%. This is likely due to stepwise regression removing weak or redundant predictors from the reduced model. 
-</br></br>As an experiment, I fitted a model using only clinical and lab findings, while explicitly excluding ultrasound findings. The yielded much lower prediction accuracy at 70.3%, further demostrating how important ultrasound is in diagnosing appendicitis in children.
+</br></br>
+![appendicitis reduced model](https://github.com/user-attachments/assets/fd87dae0-cf57-4c75-8bb7-8b49f8b4530d)
+The reduced model managed to get the prediction accuracy of 95.2% while the full model (named trimmed model in the code) got 94.5%. This is likely due to stepwise regression removing weak or redundant predictors from the reduced model. 
+</br></br>As an experiment, I fitted a model using only clinical and lab findings, while explicitly excluding ultrasound findings. The yielded much lower prediction accuracy at 71.7%, further demostrating how important ultrasound is in diagnosing appendicitis in children.
 
 ## Reference
 Marcinkevičs, R., Reis Wolfertstetter, P., Klimiene, U., Chin-Cheong, K., Paschke, A., Zerres, J., Denzinger, M., Niederberger, D., Wellmann, S., Ozkan, E., Knorr, C., & Vogt, J. E. (2024). Interpretable and intervenable ultrasonography-based machine learning models for pediatric appendicitis. _Medical image analysis_, 91, 103042. https://doi.org/10.1016/j.media.2023.103042
 
 ## Afterthoughts
-At first, I thought this would be a straightforward project, but soon realized that there are a lot more nuance to it than I thought. There are many things I learnt while doing this project and many more that I'd like to try out. I'm starting to like coding in R a lot. Statistical model is also very neat, because of how interpretable it is.
+This project required planning than I thought. There are many things I learnt while doing this project and many more that I'd like to try out. I'm starting to like coding in R a lot as well, and statistical model is also very nice because of how interpretable it is. Still, when applying model like this in the real life scenario, I think it might be better to interpret odds ratio instead of making classification due to the uncertain nature of the diagnosis?
